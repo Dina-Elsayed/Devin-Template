@@ -3,22 +3,43 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #5c99ee;
+  --second-color: #ffffff;
+  --body-color:#535d6b;
+  --header-font: "Questrial", sans-serif;
+  
+}
+
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
 }
 
 h1, h2, h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--header-font);
 }
-
-
-
 
 .blue {
-  color: cornflowerblue;
+  color: var(--primary-color);
+  position: relative;
+ 
+  
 }
 
+
+.blue::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: var(--primary-color);
+  opacity: 0.3;
+
+}
 /* Header */
 .header {
   width: 100%;
@@ -56,7 +77,7 @@ h1, h2, h3 {
 }
 
 .nav a:hover {
-  color: cornflowerblue;
+  color: var(--primary-color);
 }
 
 /*  Hero  */
@@ -77,7 +98,7 @@ h1, h2, h3 {
 }
 
 .hero p {
-  color: rgb(102, 102, 102);
+  color: var(--body-color);
   margin-bottom: 40px;
   line-height: 1.7;
 }
@@ -89,8 +110,8 @@ h1, h2, h3 {
 }
 
 .hero-btn {
-  background-color: cornflowerblue;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--second-color);
   text-decoration: none;
   padding: 15px 30px;
   border-radius: 5px;
@@ -100,15 +121,15 @@ h1, h2, h3 {
 
 .hero-btn2 {
   text-decoration: none;
-  color: rgb(102, 102, 102);
+  color: var(--body-color);
   display: inline-flex;
   align-items: center;
   font-size: 14px;
 }
 
 .playicon {
-  background-color: cornflowerblue;
-  color: white;
+  background-color: var(--primary-color);
+  color: var(--second-color);
   border-radius: 50%;
   padding: 10px;
   margin-right: 10px;
@@ -146,7 +167,7 @@ h1, h2, h3 {
 }
 
 .about-text p {
-  color: rgb(102, 102, 102);
+  color: var(--body-color);
   line-height: 1.9;
   font-size: 18px;
   margin-bottom: 20px;
@@ -176,7 +197,7 @@ h1, h2, h3 {
 .numbers .label {
   display: block;
   font-size: 14px;
-  color: rgb(102, 102, 102);
+  color: var(--body-color);
 }
 
 .Discover-button {
@@ -188,27 +209,26 @@ h1, h2, h3 {
 .Discover-button a{
 
   text-decoration: none;
-  background-color: white;
-  color: cornflowerblue;
+  background-color: var(--second-color);
+  color: var(--primary-color);;
   border-radius: 5px;
   padding: 15px 30px;
   border-style: solid;
-  border-color: cornflowerblue;
-  
-
-
-
+  border-color: var(--primary-color);
+   transition: all 0.4s ease;
 
 }
 
 
 .Discover-button a:hover {
-   background-color: cornflowerblue;
-   color: white;
+   background-color: var(--primary-color);;
+   color: var(--second-color);
+   transform: translateY(-5px);
+   box-shadow: 0 8px 20px rgba(0, 0, 0,0.2);
 }
 
 .services h3{
-  color: rgb(102, 102, 102);
+  color: var(--body-color);
   font-weight: normal;
   text-align: center;
   font-size: 46px;
@@ -216,21 +236,21 @@ h1, h2, h3 {
 }
 
 .services hr{
-    border: 2px solid cornflowerblue;
+    border: 2px solid var(--primary-color);;
     width: 60px;
     margin:20px auto;
 }
 
 .services p {
   text-align: center;
-  color: rgb(102, 102, 102);
+  color: var(--body-color);
 }
 
 /*
 
 .serv-but{
  display: flex;
-  background-color: white;
+  background-color: var(--second-color);
   padding: 20px;
   justify-content: space-evenly;
 
@@ -250,7 +270,7 @@ h1, h2, h3 {
   display: flex;
   justify-content: center;
   gap: 20px;
-  background-color: white;
+  background-color: var(--second-color);
   padding: 50px;
   width: 100%;
   
@@ -258,8 +278,8 @@ h1, h2, h3 {
 
 
 .serv-img, .serv-img2 {
-  background-color: aliceblue;
-  border: 1px solid whitesmoke ;
+  background-color: var(--second-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 10px;
   box-shadow: 0 4px 6px black;
   transition: transform 0.4s;
@@ -291,14 +311,14 @@ h1, h2, h3 {
 }
 
 .serv-img a:hover {
-  color: cornflowerblue;
+  color: var(--primary-color);;
 
 }
 
 .serv-img p {
   
   line-height: 1.6;
-  color: rgb(102, 102, 102);
+  color: var(--body-color);
 
 }
 
@@ -319,11 +339,11 @@ h1, h2, h3 {
 
 
 .services .serv-img2 .check {
-  border-color:  cornflowerblue ;
+  border-color:  var(--primary-color); ;
   border-style: solid;
   border-radius:15px;
-  color: white;
-  background-color: cornflowerblue;
+  color: var(--second-color);
+  background-color: var(--primary-color);;
   
 
 }
@@ -338,12 +358,12 @@ h1, h2, h3 {
 }
 
 .Protofolio hr{
-    border: 2px solid cornflowerblue;
+    border: 2px solid var(--primary-color);;
     width: 60px;
     margin:20px auto;
 }
 
 .Protofolio p {
   text-align: center;
-  color: rgb(102, 102, 102);
+  color: var(--body-color);
 }
