@@ -1,6 +1,7 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 :root {
@@ -18,19 +19,61 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: var(--header-font);
+.container{
+  width: 90%;
+  margin: auto;
+
 }
 
-.blue {
+.flex{
+  display: flex;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.padd-20{
+  padding: 20px;
+}
+
+.gap-40{
+  gap: 40px;
+
+}
+
+.link{
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+.link-hover:hover{
   color: var(--primary-color);
-  position: relative;
- 
-  
 }
 
+.section-padding{
+  padding: 100px 0;
+}
 
-.blue::after {
+.max-600{
+  max-width: 600px;
+}
+
+.text-primary{
+  color: var(--primary-color);
+}
+
+.line{
+
+  position: relative;
+}
+
+.line::after{
   content: "";
   position: absolute;
   left: 0;
@@ -41,10 +84,68 @@ h1, h2, h3 {
   opacity: 0.3;
 
 }
-/* Header */
-.header {
-  width: 100%;
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
+
+.heading-font{
+  font-size: 36px;
+
+}
+
+.marg-btm-20{
+  margin-bottom: 20px;
+}
+
+.text-body{
+  color: var(--body-color);
+
+}
+
+.marg-btm-40{
+  margin-bottom: 40px;
+}
+
+.line-17{
+   line-height: 1.7;
+}
+
+
+.gap-20{
+  gap: 20px;
+}
+
+.btn{
+
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+
+}
+
+.btn-primary{
+  background-color: var(--primary-color);
+  color: var(--second-color);
+}
+
+
+
+/*-------------------------------------------------------------------*/
+
+h1, h2, h3 {
+  font-family: var(--header-font);
+}
+
+
+
+
+
+/* Header */
 
 .top-bar {
   background-color: rgb(30, 75, 111);
@@ -55,70 +156,21 @@ h1, h2, h3 {
   width: 200px;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
 
-.nav-title {
-  margin: 0;
-}
 
-.nav {
-  display: flex;
-  gap: 40px;
-}
 
-.nav a {
-  text-decoration: none;
-  color: black;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  color: var(--primary-color);
-}
 
 /*  Hero  */
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 80px 100px;
-}
 
-.hero-text {
-  max-width: 600px;
-}
 
-.hero h1 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
 
-.hero p {
-  color: var(--body-color);
-  margin-bottom: 40px;
-  line-height: 1.7;
-}
 
-.hero-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
 
-.hero-btn {
-  background-color: var(--primary-color);
-  color: var(--second-color);
-  text-decoration: none;
-  padding: 15px 30px;
-  border-radius: 5px;
-  font-size: 13px;
-  font-weight: 500;
-}
+
+
+
+
+
 
 .hero-btn2 {
   text-decoration: none;
@@ -247,25 +299,6 @@ h1, h2, h3 {
   color: var(--body-color);
 }
 
-/*
-
-.serv-but{
- display: flex;
-  background-color: var(--second-color);
-  padding: 20px;
-  justify-content: space-evenly;
-
-
-}
-
-.serv-but div{
-  width: 33.33%;
-  border: 2px solid blue;
- 
- 
-}
-
-*/
 
 .serv-but {
   display: flex;
@@ -277,13 +310,27 @@ h1, h2, h3 {
   
 }
 
+.serv-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#cfe3ff;
+  color:#5992e1;
+  border-radius: 50%;
+  padding: 12px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  
+
+}
 
 .serv-img, .serv-img2 {
   background-color: var(--second-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   border-radius: 10px;
-  box-shadow: 0 4px 6px black;
-  transition: transform 0.4s;
+  box-shadow: 0px 0px 1px 0px rgb(105 105 184);
+  transition: transform 0.4s border-color 0.3s, box-shadow 0.3s;
   padding: 20px;
  
 }
@@ -291,16 +338,20 @@ h1, h2, h3 {
 .serv-img
 {
   width: 400px;
+  position: relative;
 }
 
 .serv-img:hover {
-  transform: translateY(-5px);
+ transform: translateY(-5px);
+ box-shadow: 0 4px 15px var(--primary-color);
+ border-color: var(--primary-color);
 }
 
 
 
 .serv-img h4 {
   color: rgb(49, 68, 88);
+  margin-top: 60px;
 
 }
 
@@ -312,7 +363,8 @@ h1, h2, h3 {
 }
 
 .serv-img a:hover {
-  color: var(--primary-color);;
+  color: var(--primary-color);
+   
 
 }
 
